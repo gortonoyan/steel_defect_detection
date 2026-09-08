@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Defect Detection | AI Vision</title>
+    <meta name="description" content="AI-powered defect detection for steel surfaces.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="glow-orb red"></div>
+        <div class="glow-orb blue"></div>
+    </div>
+
+    <main class="container glass-panel">
+        <header>
+            <h1>Steel Defect AI</h1>
+            <p>Upload a steel surface image to instantly detect and segment anomalies using advanced deep learning.</p>
+        </header>
+
+        <section class="upload-section">
+            <div id="drop-zone" class="drop-zone">
+                <input type="file" id="file-input" accept="image/jpeg, image/png, image/jpg" hidden>
+                <div class="drop-content">
+                    <svg class="upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    <p>Drag & Drop your image here</p>
+                    <span>or <button id="browse-btn" class="btn-text">Browse Files</button></span>
+                </div>
+            </div>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Analyzing surface structure...</p>
+            </div>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <h2>Analysis Results</h2>
+            <div class="result-display">
+                <img id="result-image" src="" alt="Defect detection result" />
+            </div>
+            <div class="defect-legend">
+                <h3>Detected Anomalies</h3>
+                <ul id="defect-list">
+                    <!-- Populated via JS -->
+                </ul>
+            </div>
+            <button id="reset-btn" class="btn-primary">Scan Another Image</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

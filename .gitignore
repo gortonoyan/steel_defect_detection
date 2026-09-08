@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data folders
+data/
+*.csv
+!data/train_folds.csv
+
+# Model weights — stored on Hugging Face Hub, not in git
+*.pth
+*.pt
+checkpoints/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kaggle credentials — NEVER commit these
+kaggle.json
+.kaggle/
